@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="Mesh2NeRF/static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="Mesh2NeRF/static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>Mesh2NeRF</title>
+  <link rel="icon" type="image/x-icon" href="Mesh2NeRF/static/images/fence.png">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="Mesh2NeRF/static/css/bulma.min.css">
+  <link rel="stylesheet" href="Mesh2NeRF/static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="Mesh2NeRF/static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="Mesh2NeRF/static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="Mesh2NeRF/static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="Mesh2NeRF/static/js/fontawesome.all.min.js"></script>
+  <script src="Mesh2NeRF/static/js/bulma-carousel.min.js"></script>
+  <script src="Mesh2NeRF/static/js/bulma-slider.min.js"></script>
+  <script src="Mesh2NeRF/static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-2 publication-title">Mesh2NeRF: Direct Mesh Supervision for Neural Radiance Field Representation and Generation </h1>
+            <div class="is-size-4 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="https://terencecyj.github.io/" target="_blank">Yujin Chen</a><sup>1</sup>,</span>
+                <span class="author-block"><a href="https://yinyunie.github.io/" target="_blank">Yinyu Nie</a><sup>1</sup>,</span>
+                <span class="author-block"><a href="" target="_blank">Benjamin Ummenhofer</a><sup>2</sup>, </span>
+                <span class="author-block"><a href="" target="_blank">Reiner Birkl</a><sup>2</sup>, </span>
+                <span class="author-block"><a href="" target="_blank">Michael Paulitsch</a><sup>2</sup>, </span>
+                <span class="author-block"><a href="https://matthias.pw/" target="_blank">Matthias Müller</a><sup>2</sup>, </span>
+                <span class="author-block"><a href="https://niessnerlab.org/members/matthias_niessner/profile.html" target="_blank">Matthias Nießner</a><sup>1</sup></span>
+              </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block"><sup>1</sup>Technical University of Munich &nbsp <sup>2</sup>Intel Labs<br>Preprint</span>
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+
+                  <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                  </a>
+                </span>
+
+                  <!-- Video Link. -->
+                  <span class="link-block">
+                    <a href="https://youtu.be/oufv1N3f7iY" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                            <svg class="svg-inline--fa fa-youtube fa-w-18" aria-hidden="true"
+                                focusable="false" data-prefix="fab" data-icon="youtube" role="img"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"
+                                data-fa-i2svg="">
+                                <path fill="currentColor"
+                                    d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z">
+                                </path>
+                            </svg><!-- <i class="fab fa-youtube"></i> Font Awesome fontawesome.com -->
+                        </span>
+                        <span>Video</span>
+                    </a>
+                </span>
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark" disabled>
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Teaser video-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <!--
+      <video poster="" id="tree" autoplay controls muted loop height="100%">
+        <source src="Mesh2NeRF/static/videos/banner_video.mp4"
+        type="video/mp4">
+      </video>
+      -->
+      <img src="Mesh2NeRF/static/images/teaser.jpg" alt="MY ALT TEXT"/>
+      <h2 class="subtitle has-text-centered">
+        We propose Mesh2NeRF, a novel method for extracting ground truth radiance fields directly from 3D textured meshes by incorporating mesh geometry, texture, and environment lighting information. 
+        Mesh2NeRF serves as direct 3D supervision for neural radiance fields, offering a comprehensive approach to leveraging mesh data for improving novel view synthesis performance.
+        Mesh2NeRF can function as supervision for generative models during training on mesh collections, advancing various 3D generation tasks, including unconditional and conditional generation.
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End teaser video -->
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            We present Mesh2NeRF, an approach to derive ground-truth radiance fields from textured meshes for 3D generation tasks. 
+            Many 3D generative approaches represent 3D scenes as radiance fields for training. 
+            Their ground-truth radiance fields are usually fitted from multi-view renderings from a large-scale synthetic 3D dataset, which often results in artifacts due to occlusions or under-fitting issues. 
+            In Mesh2NeRF, we propose an analytic solution to directly obtain ground-truth radiance fields from 3D meshes, characterizing the density field with an occupancy function featuring a defined surface thickness, and determining view-dependent color through a reflection function considering both the mesh and environment lighting. 
+            Mesh2NeRF extracts accurate radiance fields which provides direct supervision for training generative NeRFs and single scene representation. 
+            We validate the effectiveness of Mesh2NeRF across various tasks, achieving a noteworthy 3.12dB improvement in PSNR for view synthesis in single scene representation on the ABO dataset, a 0.69 PSNR enhancement in the single-view conditional generation of ShapeNet Cars, and notably improved mesh extraction from NeRF in the unconditional generation of Objaverse Mugs.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+
+<!-- Youtube video -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-centered has-text-centered  is-max-desktop">
+      <!-- Paper video. -->
+      <h2 class="title is-3">Video</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          
+          <div class="publication-video">
+            <!-- Youtube embed code here -->
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/oufv1N3f7iY?si=m-E0iCwMj_Dqp45q" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End youtube video -->
+
+
+<!-- Video carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <h2 class="title is-4">Single Scene Fitting</h2>
+      <p>
+        Mesh2NeRF can be applied to supervision of a single scene radiance field representation from a given mesh.
+        We compare Mesh2NeRF NGP with Instant NGP.
+      </p>
+      <br/>
+      <table width="100%">
+        <tr>
+            <td align="center" width="30%">Instant NGP</td>
+            <td width="2%"></td>
+            <td align="center" width="30%">Ours (Mesh2NeRF NGP)</td>
+            <td width="1%"></td>
+            <td align="center" width="36%">Ground Truth</td>
+        </tr>
+      </table>
+      <div id="reenactments-container" class="container">
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item item-video1">
+            <video poster="" id="video1" autoplay controls muted loop height="100%">
+              <!-- Your video file here -->
+              <source src="Mesh2NeRF/static/videos/entree_du_chateau_des_bois_francs.mp4"
+              type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-video2">
+            <video poster="" id="video2" autoplay controls muted loop height="100%">
+              <!-- Your video file here -->
+              <source src="Mesh2NeRF/static/videos/chateau_des_bois_francs.mp4"
+              type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+<!-- End video carousel -->
+
+<!-- Video carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <h2 class="title is-4">NeRF Generation</h2>
+      <p>
+        Mesh2NeRF can be applied to supervise NeRF generation tasks.
+        We compare Mesh2NeRF supervision to SSDNeRF with traditional NeRF supervision on conditional NeRF generation tasks.
+      </p>
+      <br/>
+      <div id="reenactments-container" class="container">
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item item-video1">
+            <video poster="" id="video1" autoplay controls muted loop height="100%">
+              <!-- Your video file here -->
+              <source src="Mesh2NeRF/static/videos/cond_1.mp4"
+              type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-video2">
+            <video poster="" id="video2" autoplay controls muted loop height="100%">
+              <!-- Your video file here -->
+              <source src="Mesh2NeRF/static/videos/cond_2.mp4"
+              type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-video3">
+            <video poster="" id="video3" autoplay controls muted loop height="100%">
+              <!-- Your video file here -->
+              <source src="Mesh2NeRF/static/videos/cond_3.mp4"
+              type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-video4">
+            <video poster="" id="video4" autoplay controls muted loop height="100%">
+              <!-- Your video file here -->
+              <source src="Mesh2NeRF/static/videos/cond_4.mp4"
+              type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-video5">
+            <video poster="" id="video5" autoplay controls muted loop height="100%">
+              <!-- Your video file here -->
+              <source src="Mesh2NeRF/static/videos/kitti_c.mp4"
+              type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+<!-- End video carousel -->
+
+
+
+
+
+
+<!-- Paper poster
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title">Poster</h2>
+
+      <iframe  src="Mesh2NeRF/static/pdfs/sample.pdf" width="100%" height="550">
+          </iframe>
+        
+      </div>
+    </div>
+  </section>
+-->
+<!--End paper poster -->
+
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>
+      @article{chen2024mesh2nerf,
+        title={Mesh2NeRF: Direct Mesh Supervision for Neural Radiance Field Representation and Generation},
+        author={Chen, Yujin and Nie, Yinyu and Ummenhofer, Benjamin and Birkl, Reiner and Paulitsch, Michael and Müller, Matthias and Nie{\ss}ner, Matthias},
+        journal={arXiv preprint},
+        year={2024}
+      }</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content has-text-centered">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>.
+          </p>
+          <p>
+            Please contact <a href="https://terencecyj.github.io/">Yujin Chen</a> for feedback and questions.
+        </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>

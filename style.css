@@ -224,8 +224,24 @@ header {
   margin-bottom: 0;
 }
 
+/* Styling for the new list inside keywords */
+.keywords ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 10px;
+}
+.keywords li {
+  margin-bottom: 5px;
+}
+.keywords b {
+  font-style: normal;
+  color: var(--text-color);
+}
+
+
 .keywords strong {
   color: var(--text-color);
+  font-style: normal;
 }
 
 /* NEW JOB SEEKING STYLE */
@@ -410,8 +426,24 @@ footer p {
   font-size: 0.8em;
 }
 
-/* --- RESPONSIVE DESIGN --- */
-@media (max-Mwidth: 768px) {
+/* --- HAMBURGER MENU BUTTON (Desktop) --- */
+/* Style for the hamburger button itself */
+#menu-toggle {
+  display: none; /* Hidden on desktop */
+  background: none;
+  border: none;
+  color: var(--text-color);
+  font-size: 28px;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+
+/* --- RESPONSIVE DESIGN (CONSOLIDATED) --- */
+/* This block now contains ALL mobile styles */
+@media (max-width: 768px) {
+
+  /* --- General Mobile Layout --- */
   .bio-container {
     flex-direction: column-reverse;
   }
@@ -430,10 +462,66 @@ footer p {
   .service-columns {
     flex-direction: column;
   }
-  nav {
-    overflow-x: auto;
+
+  /* --- Hamburger Menu Styles --- */
+  
+  /* Make the nav container space-between to push button to one side */
+  .nav-container {
+    justify-content: space-between;
   }
-  nav .nav-container {
-    justify-content: flex-start;
+  
+  /* Show the hamburger button */
+  #menu-toggle {
+    display: block;
+  }
+  
+  /* Hide the desktop navigation list */
+  #main-nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px; /* Adjust this to match your nav height */
+    left: 0;
+    background-color: var(--bg-color);
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: var(--card-shadow);
+  }
+  
+  /* This class will be added by JavaScript */
+  #main-nav.show {
+    display: flex;
+  }
+  
+  /* Style for mobile menu links */
+  #main-nav li {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+  }
+  
+  #main-nav a {
+    padding: 15px;
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  /* Remove the old side-scrolling behavior */
+  nav {
+    overflow-x: hidden;
+  }
+
+  /* --- Mobile Font/Padding Fixes --- */
+  .container {
+    padding: 10px; /* Tighter padding on mobile */
+  }
+  
+  h1 { font-size: 2em; } /* Smaller h1 on mobile */
+  h2 { font-size: 1.5em; } /* Smaller h2 on mobile */
+  
+  /* Fix for keywords list on mobile */
+  .keywords ul {
+    padding-left: 20px;
   }
 }
